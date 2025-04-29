@@ -1,5 +1,5 @@
 // Constants
-const SCHOOL_PASSWORD = "friendsonly2025"; // Change this to your desired password
+const SCHOOL_PASSWORD = "cheeseeggandbacon6"; // Change this to your desired password
 const STARTING_BALANCE = 1000;
 
 // Global variables
