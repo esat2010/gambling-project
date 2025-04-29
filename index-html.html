@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend's Game Night</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h1>Friend's Game Night</h1>
+        <p>Virtual games for friends only. No real money involved.</p>
+        <div class="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="login-btn">Enter</button>
+            <p id="login-error" class="error-msg"></p>
+        </div>
+    </div>
+
+    <div class="container hidden" id="lobby-container">
+        <div class="header">
+            <h1>Game Lobby</h1>
+            <div class="user-info">
+                <span id="user-name"></span>
+                <span id="user-balance"></span>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </div>
+        
+        <div class="players-list">
+            <h2>Players Online</h2>
+            <ul id="players"></ul>
+        </div>
+
+        <div class="games-grid">
+            <div class="game-card" id="dice-game">
+                <h3>Dice Game</h3>
+                <p>Roll the dice and bet on the outcome!</p>
+                <button class="play-btn" data-game="dice">Play</button>
+            </div>
+            <div class="game-card" id="roulette-game">
+                <h3>Roulette</h3>
+                <p>Place your bets and spin the wheel!</p>
+                <button class="play-btn" data-game="roulette">Play</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hidden" id="dice-container">
+        <div class="header">
+            <h1>Dice Game</h1>
+            <div class="user-info">
+                <span id="dice-user-name"></span>
+                <span id="dice-user-balance"></span>
+                <button class="back-btn">Back to Lobby</button>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="dice-area">
+                <div class="dice" id="dice1">1</div>
+                <div class="dice" id="dice2">1</div>
+                <div id="dice-total">Total: 2</div>
+            </div>
+            
+            <div class="bet-options">
+                <h3>Place Your Bet</h3>
+                <div class="bet-type">
+                    <label>
+                        <input type="radio" name="bet-type" value="over7" checked> Over 7
+                    </label>
+                    <label>
+                        <input type="radio" name="bet-type" value="under7"> Under 7
+                    </label>
+                    <label>
+                        <input type="radio" name="bet-type" value="exactly7"> Exactly 7
+                    </label>
+                </div>
+                
+                <div class="bet-amount">
+                    <label for="dice-bet-amount">Bet Amount:</label>
+                    <input type="number" id="dice-bet-amount" min="10" max="1000" value="100">
+                </div>
+                
+                <button id="place-dice-bet-btn">Place Bet</button>
+                <button id="roll-dice-btn" disabled>Roll Dice</button>
+            </div>
+            
+            <div class="opponents">
+                <h3>Opponents</h3>
+                <ul id="dice-opponents"></ul>
+                <input type="text" id="invite-player" placeholder="Invite a player">
+                <button id="send-invite-btn">Send Invite</button>
+            </div>
+            
+            <div id="dice-result" class="result-area hidden">
+                <h3>Result</h3>
+                <p id="dice-result-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hidden" id="roulette-container">
+        <div class="header">
+            <h1>Roulette</h1>
+            <div class="user-info">
+                <span id="roulette-user-name"></span>
+                <span id="roulette-user-balance"></span>
+                <button class="back-btn">Back to Lobby</button>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="roulette-wheel">
+                <div class="wheel" id="wheel">
+                    <div class="wheel-inner">
+                        <div class="wheel-center"></div>
+                    </div>
+                </div>
+                <div id="ball"></div>
+                <div id="result-number">0</div>
+            </div>
+            
+            <div class="bet-options">
+                <h3>Place Your Bet</h3>
+                <div class="bet-type">
+                    <label>
+                        <input type="radio" name="roulette-bet-type" value="red" checked> Red
+                    </label>
+                    <label>
+                        <input type="radio" name="roulette-bet-type" value="black"> Black
+                    </label>
+                    <label>
+                        <input type="radio" name="roulette-bet-type" value="green"> Green (0)
+                    </label>
+                </div>
+                
+                <div class="bet-amount">
+                    <label for="roulette-bet-amount">Bet Amount:</label>
+                    <input type="number" id="roulette-bet-amount" min="10" max="1000" value="100">
+                </div>
+                
+                <button id="place-roulette-bet-btn">Place Bet</button>
+                <button id="spin-wheel-btn" disabled>Spin Wheel</button>
+            </div>
+            
+            <div class="opponents">
+                <h3>Opponents</h3>
+                <ul id="roulette-opponents"></ul>
+                <input type="text" id="roulette-invite-player" placeholder="Invite a player">
+                <button id="roulette-send-invite-btn">Send Invite</button>
+            </div>
+            
+            <div id="roulette-result" class="result-area hidden">
+                <h3>Result</h3>
+                <p id="roulette-result-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
