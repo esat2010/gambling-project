@@ -1,0 +1,419 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.error-msg {
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+/* Login styles */
+#login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#login-container h1 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.login-form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#user-balance, #dice-user-balance, #roulette-user-balance {
+    background-color: #2ecc71;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+#logout-btn, .back-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#logout-btn:hover, .back-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Lobby styles */
+.players-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.players-list h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.players-list ul {
+    list-style: none;
+}
+
+.players-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.players-list li:last-child {
+    border-bottom: none;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.game-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.game-card p {
+    margin-bottom: 15px;
+    color: #7f8c8d;
+}
+
+.play-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.play-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Game styles */
+.game-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Dice game styles */
+.dice-area {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#dice-total {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bet-options, .opponents {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bet-options h3, .opponents h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.bet-type {
+    margin-bottom: 20px;
+}
+
+.bet-type label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.bet-amount {
+    margin-bottom: 20px;
+}
+
+.bet-amount input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#place-dice-bet-btn, #roll-dice-btn, #place-roulette-bet-btn, #spin-wheel-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#place-dice-bet-btn:hover, #roll-dice-btn:hover, #place-roulette-bet-btn:hover, #spin-wheel-btn:hover {
+    background-color: #2980b9;
+}
+
+#roll-dice-btn:disabled, #spin-wheel-btn:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.result-area {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.result-area h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+#dice-result-text, #roulette-result-text {
+    font-size: 18px;
+}
+
+.opponents ul {
+    list-style: none;
+    margin-bottom: 15px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.opponents li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.opponents input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#send-invite-btn, #roulette-send-invite-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#send-invite-btn:hover, #roulette-send-invite-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Roulette styles */
+.roulette-wheel {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #e74c3c 0deg 10deg, #000 10deg 20deg,
+        #e74c3c 20deg 30deg, #000 30deg 40deg,
+        #e74c3c 40deg 50deg, #000 50deg 60deg,
+        #e74c3c 60deg 70deg, #000 70deg 80deg,
+        #e74c3c 80deg 90deg, #000 90deg 100deg,
+        #e74c3c 100deg 110deg, #000 110deg 120deg,
+        #e74c3c 120deg 130deg, #000 130deg 140deg,
+        #e74c3c 140deg 150deg, #000 150deg 160deg,
+        #e74c3c 160deg 170deg, #000 170deg 180deg,
+        #e74c3c 180deg 190deg, #000 190deg 200deg,
+        #e74c3c 200deg 210deg, #000 210deg 220deg,
+        #e74c3c 220deg 230deg, #000 230deg 240deg,
+        #e74c3c 240deg 250deg, #000 250deg 260deg,
+        #e74c3c 260deg 270deg, #000 270deg 280deg,
+        #e74c3c 280deg 290deg, #000 290deg 300deg,
+        #e74c3c 300deg 310deg, #000 310deg 320deg,
+        #e74c3c 320deg 330deg, #000 330deg 340deg,
+        #e74c3c 340deg 350deg, #000 350deg 360deg
+    );
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.wheel-inner {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #34495e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wheel-center {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e74c3c;
+}
+
+#ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#result-number {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .game-area {
+        grid-template-columns: 1fr;
+    }
+    
+    .wheel {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .wheel-inner {
+        width: 160px;
+        height: 160px;
+    }
+}
