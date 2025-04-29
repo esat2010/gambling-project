@@ -304,7 +304,6 @@ document.getElementById("place-roulette-bet-btn").addEventListener("click", () =
 
 document.getElementById("spin-wheel-btn").addEventListener("click", () => {
     const wheel = document.getElementById("wheel");
-    const ball = document.getElementById("ball");
     const resultNumber = document.getElementById("result-number");
     
     // Disable spin button
