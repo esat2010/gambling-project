@@ -1,4 +1,4 @@
-# Friend's Game Night
+# Monkeys Gambling
 
 A password-protected virtual gambling site for friends to play together with no real money involved. This project includes simple casino-style games like dice and roulette.
 
